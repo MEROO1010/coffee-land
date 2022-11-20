@@ -1,3 +1,4 @@
+import 'package:coffee_land/screens/cappuccino.dart';
 import 'package:coffee_land/screens/login.dart';
 import 'package:coffee_land/screens/signup.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,8 @@ void main() {
     routes: {
       '/': ((context) => Home()),
       '/login': (context) => login(),
-      '/signup': (context) => signup()
+      '/signup': (context) => signup(),
+      '/cappuccino': (context) => cappuccino()
     },
   ));
 }
