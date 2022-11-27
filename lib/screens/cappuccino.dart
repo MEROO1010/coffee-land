@@ -3,9 +3,6 @@ import 'package:sidebarx/sidebarx.dart';
 
 void main() {
   runApp(cappuccino());
-  Container(
-    child: TheContent(),
-  );
 }
 
 class cappuccino extends StatelessWidget {
@@ -16,47 +13,83 @@ class cappuccino extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'SideBar',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: primaryColor,
-        canvasColor: canvasColor,
-        scaffoldBackgroundColor: scaffoldBackgroundColor,
-        textTheme: const TextTheme(
-          headlineSmall: TextStyle(
-            color: Colors.white,
-            fontSize: 46,
-            fontWeight: FontWeight.w900,
+    return Stack(
+      children: [
+        MaterialApp(
+          title: 'SideBar',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            primaryColor: primaryColor,
+            canvasColor: canvasColor,
+            scaffoldBackgroundColor: scaffoldBackgroundColor,
+            textTheme: const TextTheme(
+              headlineSmall: TextStyle(
+                color: Colors.white,
+                fontSize: 46,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+          home: Builder(
+            builder: (context) {
+              final isSmallScreen = MediaQuery.of(context).size.width < 600;
+              return Scaffold(
+                key: _key,
+                appBar: isSmallScreen
+                    ? AppBar(
+                        backgroundColor: canvasColor,
+                        title: Text('Cappuccino'),
+                        leading: IconButton(
+                          onPressed: () {
+                            // if (!Platform.isAndroid && !Platform.isIOS) {
+                            //   _controller.setExtended(true);
+                            // }
+                            _key.currentState?.openDrawer();
+                          },
+                          icon: const Icon(Icons.menu),
+                        ),
+                      )
+                    : null,
+                drawer: ExampleSidebarX(controller: _controller),
+
+                //THE CONTENT OF THE PAGE
+              );
+            },
           ),
         ),
-      ),
-      home: Builder(
-        builder: (context) {
-          final isSmallScreen = MediaQuery.of(context).size.width < 600;
-          return Scaffold(
-            key: _key,
-            appBar: isSmallScreen
-                ? AppBar(
-                    backgroundColor: canvasColor,
-                    title: Text('Cappuccino'),
-                    leading: IconButton(
-                      onPressed: () {
-                        // if (!Platform.isAndroid && !Platform.isIOS) {
-                        //   _controller.setExtended(true);
-                        // }
-                        _key.currentState?.openDrawer();
-                      },
-                      icon: const Icon(Icons.menu),
-                    ),
-                  )
-                : null,
-            drawer: ExampleSidebarX(controller: _controller),
-
-            //THE CONTENT OF THE PAGE
-          );
-        },
-      ),
+        Container(
+          child: Text(
+            'Find your favorite coffee',
+            style: TextStyle(
+                fontSize: 20,
+                fontFamily: 'Schyler',
+                decoration: TextDecoration.none,
+                color: Color.fromRGBO(112, 112, 112, 1),
+                fontWeight: FontWeight.w900),
+          ),
+          padding: EdgeInsets.only(left: 80, top: 120),
+        ),
+        Row(
+          children: [
+            Container(
+              child: TextButton(onPressed: () {}, child: Text('Cappuccino')),
+              padding: EdgeInsets.only(left: 20, top: 190),
+            ),
+            Container(
+              child: TextButton(onPressed: () {}, child: Text('Latte')),
+              padding: EdgeInsets.only(left: 20, top: 190),
+            ),
+            Container(
+              child: TextButton(onPressed: () {}, child: Text('Espresso')),
+              padding: EdgeInsets.only(left: 20, top: 190),
+            ),
+            Container(
+              child: TextButton(onPressed: () {}, child: Text('Mocha')),
+              padding: EdgeInsets.only(left: 20, top: 190),
+            )
+          ],
+        ),
+      ],
     );
   }
 }
@@ -221,38 +254,6 @@ String _getTitleByIndex(int index) {
       return 'Settings';
     default:
       return 'Not found page';
-  }
-}
-
-class TheContent extends StatefulWidget {
-  const TheContent({super.key});
-
-  @override
-  State<TheContent> createState() => _TheContentState();
-}
-
-class _TheContentState extends State<TheContent> {
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          child: TextField(
-            decoration: InputDecoration(
-                hintText: 'Find your Coffee..',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(),
-                filled: true,
-                fillColor: Color.fromRGBO(240, 183, 127, 1),
-                enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(50))),
-          ),
-          alignment: Alignment.center,
-          padding: EdgeInsets.only(top: 500, left: 40),
-        ),
-      ],
-    );
   }
 }
 
