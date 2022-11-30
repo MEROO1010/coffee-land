@@ -65,6 +65,50 @@ class cappuccino extends StatelessWidget {
             )
           ],
         ),
+        ListView(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp1.png')),
+                  padding: EdgeInsets.only(left: 200, top: 250),
+                ),
+                Container(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp2.png')),
+                  padding: EdgeInsets.only(left: 10, top: 250),
+                ),
+                Container(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp3.png')),
+                  padding: EdgeInsets.only(left: 200, top: 430),
+                ),
+                Container(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp4.png')),
+                  padding: EdgeInsets.only(left: 10, top: 430),
+                ),
+                Container(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp5.png')),
+                  padding: EdgeInsets.only(left: 200, top: 620),
+                ),
+                Container(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp6.png')),
+                  padding: EdgeInsets.only(left: 10, top: 620),
+                ),
+              ],
+            )
+          ],
+        ),
         GNav(
             rippleColor:
                 Colors.amberAccent, // tab button ripple color when pressed
@@ -87,23 +131,28 @@ class cappuccino extends StatelessWidget {
             tabBackgroundColor:
                 Colors.purple.withOpacity(0.1), // selected tab background color
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            tabMargin: EdgeInsets.only(top: 700), // navigation bar padding
+            tabMargin: EdgeInsets.only(top: 700, left: 10),
+            // navigation bar padding
             tabs: [
               GButton(
                 icon: Icons.home,
                 text: 'Home',
+                margin: EdgeInsets.only(left: 10, top: 700),
               ),
               GButton(
                 icon: Icons.car_repair_rounded,
                 text: 'Likes',
+                margin: EdgeInsets.only(right: 8, top: 700),
               ),
               GButton(
                 icon: Icons.search,
                 text: 'Search',
+                margin: EdgeInsets.only(right: 8, top: 700),
               ),
               GButton(
                 icon: Icons.settings,
                 text: 'Profile',
+                margin: EdgeInsets.only(right: 8, top: 700),
               )
             ]),
       ],
