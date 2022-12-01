@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -48,7 +50,14 @@ class cappuccino extends StatelessWidget {
         Row(
           children: [
             Container(
-              child: TextButton(onPressed: () {}, child: Text('Cappuccino')),
+              child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Cappuccino',
+                    style: TextStyle(
+                        color: Color.fromRGBO(147, 75, 60, 1),
+                        fontWeight: FontWeight.w800),
+                  )),
               padding: EdgeInsets.only(left: 20, top: 220),
             ),
             Container(
@@ -109,52 +118,57 @@ class cappuccino extends StatelessWidget {
             )
           ],
         ),
-        GNav(
-            rippleColor:
-                Colors.amberAccent, // tab button ripple color when pressed
-            hoverColor: Colors.yellow, // tab button hover color
-            haptic: true, // haptic feedback
-            tabBorderRadius: 15,
-            tabActiveBorder:
-                Border.all(color: Colors.black, width: 1), // tab button border
-            tabBorder:
-                Border.all(color: Colors.grey, width: 1), // tab button border
-            tabShadow: [
-              BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)
-            ], // tab button shadow
-            curve: Curves.easeOutExpo, // tab animation curves
-            duration: Duration(milliseconds: 900), // tab animation duration
-            gap: 8, // the tab button gap between icon and text
-            color: Colors.grey[800], // unselected icon color
-            activeColor: Colors.purple, // selected icon and text color
-            iconSize: 24, // tab button icon size
-            tabBackgroundColor:
-                Colors.purple.withOpacity(0.1), // selected tab background color
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-            tabMargin: EdgeInsets.only(top: 700, left: 10),
-            // navigation bar padding
-            tabs: [
-              GButton(
-                icon: Icons.home,
-                text: 'Home',
-                margin: EdgeInsets.only(left: 10, top: 700),
-              ),
-              GButton(
-                icon: Icons.car_repair_rounded,
-                text: 'Likes',
-                margin: EdgeInsets.only(right: 8, top: 700),
-              ),
-              GButton(
-                icon: Icons.search,
-                text: 'Search',
-                margin: EdgeInsets.only(right: 8, top: 700),
-              ),
-              GButton(
-                icon: Icons.settings,
-                text: 'Profile',
-                margin: EdgeInsets.only(right: 8, top: 700),
-              )
-            ]),
+        Container(
+          child: GNav(
+              rippleColor:
+                  Colors.amberAccent, // tab button ripple color when pressed
+              hoverColor: Colors.yellow, // tab button hover color
+              haptic: true, // haptic feedback
+              tabBorderRadius: 15,
+              tabActiveBorder: Border.all(
+                  color: Colors.black, width: 1), // tab button border
+              tabBorder:
+                  Border.all(color: Colors.grey, width: 1), // tab button border
+              tabShadow: [
+                BoxShadow(
+                  color: Color.fromRGBO(237, 229, 218, 1),
+                )
+              ], // tab button shadow
+              curve: Curves.easeOutExpo, // tab animation curves
+              duration: Duration(milliseconds: 900), // tab animation duration
+              gap: 6, // the tab button gap between icon and text
+              color: Colors.grey[800], // unselected icon color
+              activeColor: Colors.purple, // selected icon and text color
+              iconSize: 24, // tab button icon size
+              tabBackgroundColor: Colors.purple
+                  .withOpacity(0.2), // selected tab background color
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              tabMargin: EdgeInsets.only(top: 700, left: 10),
+
+              // navigation bar padding
+              tabs: [
+                GButton(
+                  icon: Icons.home,
+                  text: 'Home',
+                  margin: EdgeInsets.only(left: 10, top: 700),
+                ),
+                GButton(
+                  icon: Icons.car_repair_rounded,
+                  text: 'Likes',
+                  margin: EdgeInsets.only(right: 8, top: 700),
+                ),
+                GButton(
+                  icon: Icons.search,
+                  text: 'Search',
+                  margin: EdgeInsets.only(right: 8, top: 700),
+                ),
+                GButton(
+                  icon: Icons.settings,
+                  text: 'Profile',
+                  margin: EdgeInsets.only(right: 8, top: 700),
+                )
+              ]),
+        )
       ],
     );
   }
