@@ -1,5 +1,10 @@
+import 'dart:js';
+
+import 'package:coffee_land/screens/Espresso.dart';
 import 'package:coffee_land/screens/cappuccino.dart';
+import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/login.dart';
+import 'package:coffee_land/screens/mocha.dart';
 import 'package:coffee_land/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -11,7 +16,10 @@ void main() {
       '/': ((context) => Home()),
       '/login': (context) => login(),
       '/signup': (context) => signup(),
-      '/cappuccino': (context) => cappuccino()
+      '/cappuccino': (context) => cappuccino(),
+      '/latte': (context) => latte(),
+      '/Espresso': (context) => Espresso(),
+      '/mocha': (context) => mocha(),
     },
   ));
 }

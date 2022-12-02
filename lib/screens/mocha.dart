@@ -4,11 +4,11 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
 
 void main() {
-  runApp(cappuccino());
+  runApp(mocha());
 }
 
-class cappuccino extends StatelessWidget {
-  cappuccino({Key? key}) : super(key: key);
+class mocha extends StatelessWidget {
+  mocha({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -54,37 +54,37 @@ class cappuccino extends StatelessWidget {
                 Container(
                   child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('assets/images/caupp1.png')),
+                      child: Image.asset('assets/images/espersso1.png')),
                   padding: EdgeInsets.only(left: 200, top: 250),
                 ),
                 Container(
                   child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('assets/images/caupp2.png')),
+                      child: Image.asset('assets/images/espersso2.png')),
                   padding: EdgeInsets.only(left: 10, top: 250),
                 ),
                 Container(
                   child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('assets/images/caupp3.png')),
+                      child: Image.asset('assets/images/espersso3.png')),
                   padding: EdgeInsets.only(left: 200, top: 430),
                 ),
                 Container(
                   child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('assets/images/caupp4.png')),
+                      child: Image.asset('assets/images/espersso4.png')),
                   padding: EdgeInsets.only(left: 10, top: 430),
                 ),
                 Container(
                   child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('assets/images/caupp5.png')),
+                      child: Image.asset('assets/images/espersso5.png')),
                   padding: EdgeInsets.only(left: 200, top: 620),
                 ),
                 Container(
                   child: TextButton(
                       onPressed: () {},
-                      child: Image.asset('assets/images/caupp6.png')),
+                      child: Image.asset('assets/images/espersso6.png')),
                   padding: EdgeInsets.only(left: 10, top: 620),
                 ),
               ],
@@ -117,8 +117,8 @@ class _rowcontentState extends State<rowcontent> {
               child: Text(
                 'Cappuccino',
                 style: TextStyle(
-                    color: Color.fromRGBO(147, 75, 60, 1),
-                    fontWeight: FontWeight.w800),
+                    color: Color.fromRGBO(191, 83, 44, 1),
+                    fontWeight: FontWeight.normal),
               )),
           padding: EdgeInsets.only(left: 20, top: 220),
         ),
@@ -149,8 +149,8 @@ class _rowcontentState extends State<rowcontent> {
               child: Text(
                 'Espresso',
                 style: TextStyle(
-                    color: Color.fromRGBO(191, 83, 44, 1),
-                    fontWeight: FontWeight.normal),
+                    color: Color.fromRGBO(147, 75, 60, 1),
+                    fontWeight: FontWeight.w800),
               )),
           padding: EdgeInsets.only(left: 20, top: 220),
         ),
@@ -160,8 +160,8 @@ class _rowcontentState extends State<rowcontent> {
               child: Text(
                 'Mocha',
                 style: TextStyle(
-                    color: Color.fromRGBO(191, 83, 44, 1),
-                    fontWeight: FontWeight.normal),
+                    color: Color.fromRGBO(147, 75, 60, 1),
+                    fontWeight: FontWeight.w800),
               )),
           padding: EdgeInsets.only(left: 20, top: 220),
         )
