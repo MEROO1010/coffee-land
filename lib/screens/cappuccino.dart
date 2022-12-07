@@ -1,4 +1,5 @@
 import 'package:coffee_land/screens/latte.dart';
+import 'package:coffee_land/screens/mocha.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
@@ -156,7 +157,17 @@ class _rowcontentState extends State<rowcontent> {
         ),
         Container(
           child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: mocha(),
+                    isIos: true,
+                    duration: Duration(milliseconds: 400),
+                  ),
+                );
+              },
               child: Text(
                 'Mocha',
                 style: TextStyle(

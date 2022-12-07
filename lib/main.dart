@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:coffee_land/screens/Espresso.dart';
 import 'package:coffee_land/screens/cappuccino.dart';
 import 'package:coffee_land/screens/latte.dart';
