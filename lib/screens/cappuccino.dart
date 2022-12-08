@@ -1,5 +1,9 @@
+import 'package:coffee_land/screens/Espresso.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/mocha.dart';
+import 'package:coffee_land/screens/navbar/myOrders.dart';
+import 'package:coffee_land/screens/navbar/profile.dart';
+import 'package:coffee_land/screens/navbar/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
@@ -95,6 +99,10 @@ class cappuccino extends StatelessWidget {
         Container(
           child: rowcontent(),
         ),
+        Padding(
+          padding: EdgeInsets.only(top: 720),
+          child: bottomav(),
+        )
       ],
     );
   }
@@ -146,7 +154,17 @@ class _rowcontentState extends State<rowcontent> {
         ),
         Container(
           child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: Espresso(),
+                    isIos: true,
+                    duration: Duration(milliseconds: 400),
+                  ),
+                );
+              },
               child: Text(
                 'Espresso',
                 style: TextStyle(
@@ -176,6 +194,47 @@ class _rowcontentState extends State<rowcontent> {
               )),
           padding: EdgeInsets.only(left: 20, top: 220),
         )
+      ],
+    );
+  }
+}
+
+class bottomav extends StatefulWidget {
+  const bottomav({super.key});
+
+  @override
+  State<bottomav> createState() => _bottomavState();
+}
+
+class _bottomavState extends State<bottomav> {
+  int selectedPage = 0;
+
+  final _pageOptions = [myordrs(), profile(), settings()];
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Scaffold(
+          body: _pageOptions[selectedPage],
+        ),
+        BottomNavigationBar(items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Home',
+            backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.delivery_dining_rounded),
+            label: 'Business',
+            backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Business',
+            backgroundColor: Colors.red,
+          ),
+        ]),
       ],
     );
   }

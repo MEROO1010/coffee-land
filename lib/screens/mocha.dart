@@ -149,8 +149,8 @@ class _rowcontentState extends State<rowcontent> {
               child: Text(
                 'Espresso',
                 style: TextStyle(
-                    color: Color.fromRGBO(147, 75, 60, 1),
-                    fontWeight: FontWeight.w800),
+                    color: Color.fromRGBO(191, 83, 44, 1),
+                    fontWeight: FontWeight.normal),
               )),
           padding: EdgeInsets.only(left: 20, top: 220),
         ),

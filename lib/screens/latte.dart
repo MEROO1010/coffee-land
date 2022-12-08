@@ -1,7 +1,9 @@
+import 'package:coffee_land/screens/Espresso.dart';
 import 'package:coffee_land/screens/cappuccino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:line_icons/line_icons.dart';
 
 void main() {
   runApp(latte());
@@ -83,7 +85,17 @@ class latte extends StatelessWidget {
             ),
             Container(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.leftToRight,
+                        child: Espresso(),
+                        isIos: true,
+                        duration: Duration(milliseconds: 400),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Espresso',
                     style: TextStyle(
@@ -149,60 +161,6 @@ class latte extends StatelessWidget {
             )
           ],
         ),
-        Container(
-          child: Padding(
-            child: GNav(
-                rippleColor:
-                    Colors.amberAccent, // tab button ripple color when pressed
-                hoverColor: Colors.yellow, // tab button hover color
-                haptic: true, // haptic feedback
-                tabBorderRadius: 15,
-                tabActiveBorder: Border.all(
-                    color: Colors.black, width: 1), // tab button border
-                tabBorder: Border.all(
-                    color: Colors.grey, width: 1), // tab button border
-                tabShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(237, 229, 218, 1),
-                  )
-                ], // tab button shadow
-                curve: Curves.easeOutExpo, // tab animation curves
-                duration: Duration(milliseconds: 900), // tab animation duration
-                gap: 4, // the tab button gap between icon and text
-                color: Colors.grey[800], // unselected icon color
-                activeColor: Colors.purple, // selected icon and text color
-                iconSize: 24, // tab button icon size
-                tabBackgroundColor: Colors.purple
-                    .withOpacity(0.2), // selected tab background color
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                tabMargin: EdgeInsets.only(top: 700, left: 10),
-
-                // navigation bar padding
-                tabs: [
-                  GButton(
-                    icon: Icons.home,
-                    text: 'Home',
-                    margin: EdgeInsets.only(left: 10, top: 700),
-                  ),
-                  GButton(
-                    icon: Icons.car_repair_rounded,
-                    text: 'Likes',
-                    margin: EdgeInsets.only(right: 8, top: 700),
-                  ),
-                  GButton(
-                    icon: Icons.search,
-                    text: 'Search',
-                    margin: EdgeInsets.only(right: 8, top: 700),
-                  ),
-                  GButton(
-                    icon: Icons.settings,
-                    text: 'Profile',
-                    margin: EdgeInsets.only(right: 8, top: 700),
-                  )
-                ]),
-            padding: EdgeInsets.all(10),
-          ),
-        )
       ],
     );
   }

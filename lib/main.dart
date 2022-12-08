@@ -3,6 +3,9 @@ import 'package:coffee_land/screens/cappuccino.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/login.dart';
 import 'package:coffee_land/screens/mocha.dart';
+import 'package:coffee_land/screens/navbar/myOrders.dart';
+import 'package:coffee_land/screens/navbar/profile.dart';
+import 'package:coffee_land/screens/navbar/settings.dart';
 import 'package:coffee_land/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -18,6 +21,9 @@ void main() {
       '/latte': (context) => latte(),
       '/Espresso': (context) => Espresso(),
       '/mocha': (context) => mocha(),
+      '/myOrder': (context) => myordrs(),
+      'profile': (context) => profile(),
+      'setings': (context) => settings(),
     },
   ));
 }
