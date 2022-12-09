@@ -11,7 +11,7 @@ class _settingsState extends State<settings> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('settings'),
+      child: Text('setings'),
     );
   }
 }

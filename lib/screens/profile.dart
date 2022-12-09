@@ -11,7 +11,7 @@ class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('profile'),
+      child: Text('hello'),
     );
   }
 }
