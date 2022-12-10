@@ -1,5 +1,6 @@
 import 'package:coffee_land/screens/Espresso.dart';
 import 'package:coffee_land/screens/cappuccino.dart';
+import 'package:coffee_land/screens/details.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/login.dart';
 import 'package:coffee_land/screens/mocha.dart';
@@ -19,6 +20,7 @@ void main() {
       '/latte': (context) => latte(),
       '/Espresso': (context) => Espresso(),
       '/mocha': (context) => mocha(),
+      'details': (context) => details(),
     },
   ));
 }

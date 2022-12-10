@@ -1,4 +1,5 @@
 import 'package:coffee_land/screens/Espresso.dart';
+import 'package:coffee_land/screens/details.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/mocha.dart';
 import 'package:coffee_land/screens/profile.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sidebarx/sidebarx.dart';
+import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
 void main() {
   runApp(cappuccino());
@@ -58,7 +60,13 @@ class cappuccino extends StatelessWidget {
               children: [
                 Container(
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const details()),
+                        );
+                      },
                       child: Image.asset('assets/images/caupp1.png')),
                   padding: EdgeInsets.only(left: 200, top: 250),
                 ),
@@ -99,19 +107,6 @@ class cappuccino extends StatelessWidget {
         Container(
           child: rowcontent(),
         ),
-        Material(
-          child: Container(
-            child: Material(
-              child: SidebarX(
-                controller: SidebarXController(selectedIndex: 0),
-                items: const [
-                  SidebarXItem(icon: Icons.home, label: 'Home'),
-                  SidebarXItem(icon: Icons.search, label: 'Search'),
-                ],
-              ),
-            ),
-          ),
-        )
       ],
     );
   }

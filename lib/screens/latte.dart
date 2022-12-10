@@ -74,7 +74,17 @@ class latte extends StatelessWidget {
             ),
             Container(
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      PageTransition(
+                        type: PageTransitionType.leftToRight,
+                        child: cappuccino(),
+                        isIos: true,
+                        duration: Duration(milliseconds: 400),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Latte',
                     style: TextStyle(
