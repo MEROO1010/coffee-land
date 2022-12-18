@@ -16,7 +16,7 @@ class _detailsState extends State<details> {
           backgroundColor: Color.fromARGB(237, 229, 218, 1),
         ),
         Container(
-          child: Image.asset('assets/images/img1.png'),
+          child: Image.asset('assets/images/caupp1.png'),
         )
       ],
     );

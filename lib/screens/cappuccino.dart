@@ -63,8 +63,12 @@ class cappuccino extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => const details()),
+                          PageTransition(
+                            type: PageTransitionType.leftToRight,
+                            child: details(),
+                            isIos: true,
+                            duration: Duration(milliseconds: 400),
+                          ),
                         );
                       },
                       child: Image.asset('assets/images/caupp1.png')),
