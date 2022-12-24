@@ -1,3 +1,5 @@
+import 'package:coffee_land/screens/Espresso.dart';
+import 'package:coffee_land/screens/cappuccino.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -113,7 +115,17 @@ class _rowcontentState extends State<rowcontent> {
       children: [
         Container(
           child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: cappuccino(),
+                    isIos: true,
+                    duration: Duration(milliseconds: 400),
+                  ),
+                );
+              },
               child: Text(
                 'Cappuccino',
                 style: TextStyle(
@@ -145,7 +157,17 @@ class _rowcontentState extends State<rowcontent> {
         ),
         Container(
           child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.leftToRight,
+                    child: Espresso(),
+                    isIos: true,
+                    duration: Duration(milliseconds: 400),
+                  ),
+                );
+              },
               child: Text(
                 'Espresso',
                 style: TextStyle(

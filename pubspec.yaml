@@ -42,6 +42,7 @@ dependencies:
   sidebarx: ^0.14.0
   elastic_drawer: ^2.0.2
   flutter_slider_drawer: ^2.1.2
+  ionicons: ^0.2.1
   
 
  

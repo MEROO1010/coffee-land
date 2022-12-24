@@ -60,6 +60,12 @@ class cappuccino extends StatelessWidget {
               children: [
                 Container(
                   child: TextButton(
+                      onPressed: () {},
+                      child: Image.asset('assets/images/caupp1.png')),
+                  padding: EdgeInsets.only(left: 200, top: 250),
+                ),
+                Container(
+                  child: TextButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -71,12 +77,6 @@ class cappuccino extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Image.asset('assets/images/caupp1.png')),
-                  padding: EdgeInsets.only(left: 200, top: 250),
-                ),
-                Container(
-                  child: TextButton(
-                      onPressed: () {},
                       child: Image.asset('assets/images/caupp2.png')),
                   padding: EdgeInsets.only(left: 10, top: 250),
                 ),

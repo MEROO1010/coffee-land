@@ -127,17 +127,6 @@ class _rowcontentState extends State<rowcontent> {
       children: [
         Container(
           child: TextButton(
-              onPressed: () {},
-              child: Text(
-                'Cappuccino',
-                style: TextStyle(
-                    color: Color.fromRGBO(191, 83, 44, 1),
-                    fontWeight: FontWeight.normal),
-              )),
-          padding: EdgeInsets.only(left: 20, top: 220),
-        ),
-        Container(
-          child: TextButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -149,6 +138,17 @@ class _rowcontentState extends State<rowcontent> {
                   ),
                 );
               },
+              child: Text(
+                'Cappuccino',
+                style: TextStyle(
+                    color: Color.fromRGBO(191, 83, 44, 1),
+                    fontWeight: FontWeight.normal),
+              )),
+          padding: EdgeInsets.only(left: 20, top: 220),
+        ),
+        Container(
+          child: TextButton(
+              onPressed: () {},
               child: Text(
                 'Latte',
                 style: TextStyle(
