@@ -92,16 +92,32 @@ class _object1State extends State<object1> {
         ),
         Container(
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                PageTransition(
+                  type: PageTransitionType.leftToRight,
+                  child: Card(),
+                  isIos: true,
+                  duration: Duration(milliseconds: 400),
+                ),
+              );
+            },
             child: Text(
               'Buy Now',
               style: TextStyle(
-                backgroundColor: Color.fromRGBO(152, 81, 68, 1),
                 color: Color.fromRGBO(237, 229, 218, 1),
               ),
             ),
+            style: TextButton.styleFrom(
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(20.0),
+              ),
+              minimumSize: Size(100, 40),
+              backgroundColor: Color.fromRGBO(152, 81, 68, 1),
+            ),
           ),
-          padding: EdgeInsets.only(top: 700, left: 200),
+          padding: EdgeInsets.only(top: 700, left: 220),
         ),
         Container(
           child: TextButton(
@@ -109,13 +125,19 @@ class _object1State extends State<object1> {
             child: Text(
               '10\$',
               style: TextStyle(
-                backgroundColor: Color.fromRGBO(190, 83, 44, 1),
                 color: Color.fromRGBO(237, 229, 218, 1),
               ),
             ),
+            style: TextButton.styleFrom(
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(20.0),
+              ),
+              minimumSize: Size(100, 40),
+              backgroundColor: Color.fromRGBO(190, 83, 44, 1),
+            ),
           ),
-          padding: EdgeInsets.only(top: 700, left: 100),
-        )
+          padding: EdgeInsets.only(top: 700, left: 80),
+        ),
       ],
     );
   }
