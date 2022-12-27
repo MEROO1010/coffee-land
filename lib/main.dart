@@ -4,7 +4,7 @@ import 'package:coffee_land/screens/details.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/login.dart';
 import 'package:coffee_land/screens/mocha.dart';
-
+import 'package:coffee_land/screens/cardlist.dart';
 import 'package:coffee_land/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -20,7 +20,8 @@ void main() {
       '/latte': (context) => latte(),
       '/Espresso': (context) => Espresso(),
       '/mocha': (context) => mocha(),
-      'details': (context) => details(),
+      '/details': (context) => details(),
+      '/cardlist': (context) => cardlist(),
     },
   ));
 }

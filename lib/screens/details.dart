@@ -1,4 +1,5 @@
 import 'package:coffee_land/screens/cappuccino.dart';
+import 'package:coffee_land/screens/cardlist.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -97,7 +98,7 @@ class _object1State extends State<object1> {
                 context,
                 PageTransition(
                   type: PageTransitionType.leftToRight,
-                  child: Card(),
+                  child: cardlist(),
                   isIos: true,
                   duration: Duration(milliseconds: 400),
                 ),
