@@ -52,7 +52,7 @@ class _forms2State extends State<forms2> {
           padding: EdgeInsets.only(left: 50, top: 322),
         ),
         Padding(
-            padding: EdgeInsets.only(top: 400, left: 20),
+            padding: EdgeInsets.only(top: 400, left: 30),
             child: Container(
               child: Material(
                 child: TextField(
@@ -70,7 +70,7 @@ class _forms2State extends State<forms2> {
               width: 340,
             )),
         Padding(
-            padding: EdgeInsets.only(top: 480, left: 20),
+            padding: EdgeInsets.only(top: 480, left: 30),
             child: Container(
               child: Material(
                 child: TextField(
@@ -88,7 +88,7 @@ class _forms2State extends State<forms2> {
               width: 340,
             )),
         Padding(
-            padding: EdgeInsets.only(top: 560, left: 20),
+            padding: EdgeInsets.only(top: 560, left: 30),
             child: Container(
               child: Material(
                 child: TextField(
@@ -108,7 +108,7 @@ class _forms2State extends State<forms2> {
 
         /* Login Button */
         Container(
-          padding: EdgeInsets.only(left: 20, top: 660),
+          padding: EdgeInsets.only(left: 30, top: 660),
           child: TextButton(
             onPressed: () {
               //Navigator.pushNamed(context, '/cappuccino');

@@ -32,7 +32,7 @@ class _detailsState extends State<details> {
         Container(
           child: TextButton(
             onPressed: () {
-              Navigator.push(
+              Navigator.pop(
                 context,
                 PageTransition(
                   type: PageTransitionType.leftToRight,
@@ -44,7 +44,7 @@ class _detailsState extends State<details> {
             },
             child: Icon(
               Icons.arrow_back_ios_new_rounded,
-              size: 40,
+              size: 50,
               color: Color.fromRGBO(240, 183, 127, 1),
             ),
           ),
