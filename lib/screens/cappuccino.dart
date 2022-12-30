@@ -2,8 +2,6 @@ import 'package:coffee_land/screens/Espresso.dart';
 import 'package:coffee_land/screens/details.dart';
 import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/mocha.dart';
-import 'package:coffee_land/screens/profile.dart';
-import 'package:coffee_land/screens/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:page_transition/page_transition.dart';

@@ -5,6 +5,7 @@ import 'package:coffee_land/screens/latte.dart';
 import 'package:coffee_land/screens/login.dart';
 import 'package:coffee_land/screens/mocha.dart';
 import 'package:coffee_land/screens/cardlist.dart';
+import 'package:coffee_land/screens/orderconformed.dart';
 import 'package:coffee_land/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -22,6 +23,7 @@ void main() {
       '/mocha': (context) => mocha(),
       '/details': (context) => details(),
       '/cardlist': (context) => cardlist(),
+      '/order': (context) => order()
     },
   ));
 }
@@ -43,8 +45,11 @@ class Home extends StatelessWidget {
             ),
           ),
           Container(
-            child: Image.asset('assets/images/coffee_land.png'),
-            padding: EdgeInsets.only(left: 20, top: 220),
+            child: Image.asset(
+              'assets/images/coffee_land.png',
+              scale: 1.2,
+            ),
+            padding: EdgeInsets.only(top: 280, left: 64),
           ),
           //login button
           Container(
