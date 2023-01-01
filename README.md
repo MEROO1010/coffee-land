@@ -1,16 +1,11 @@
 # coffee_land
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+The link of the design in behance 
+https://www.behance.net/gallery/149167533/Coffee-Land-App-design
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+##The mouckup 
+![mouckup coffeeland](https://user-images.githubusercontent.com/72358981/210159336-ac5f3535-a54f-4d66-a996-a77c280b50be.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
