@@ -1,8 +1,8 @@
 # coffee_land
 
 ## Getting Started
+I program an app I desogned previously with flutter, you can find the link of the design in behance    
 
-The link of the design in behance 
 https://www.behance.net/gallery/149167533/Coffee-Land-App-design
 
 
