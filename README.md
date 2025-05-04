@@ -39,19 +39,33 @@ APIs: RESTful APIs developed using Django REST Framework
 # 📁 Project Structure
 
 coffee-land/
+
 ├── android/
+
 ├── assets/
+
 │   └── images/
+
 ├── backend_django/
+
 ├── ios/
+
 ├── lib/
+
 │   ├── models/
+
 │   ├── screens/
+
 │   ├── widgets/
+
 │   └── main.dart
+
 ├── test/
+
 ├── pubspec.yaml
+
 └── README.md
+
 
 
 # 🧑‍💻 Getting Started
